@@ -30,7 +30,6 @@ def get_logger(name: str, log_path: Path | None = None) -> logging:
     logged_handler_stream.setFormatter(logged_formatter)
 
     # create main logger for all child modules of thi package
-    print(f"{name=}")
     my_logger: logging = logging.getLogger(name)
     my_logger.addHandler(logged_handler_file)
     my_logger.addHandler(logged_handler_error_file)
